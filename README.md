@@ -26,28 +26,28 @@
 
 # Para Trabalhar no Projeto
 
-1) Node JS - Instalar Versão Compatível (18.19.0 ou mais recente)<br/>
+**1) Node JS - Instalar Versão Compatível (18.19.0 ou mais recente)**<br/>
 Node JS | Versão: 18.19.0 (LTS): [Link](https://nodejs.org/pt/blog/release/v18.19.0)
 
-2) GitHub - Acessar Repositório Remoto<br/>
+**2) GitHub - Acessar Repositório Remoto**<br/>
 Projeto: [Link](https://github.com/rosadevsolutions/2025-vainaweb-sispar)
 
-3) Terminal - Clonar Projeto do Repositório Remoto para sua Máquina<br/>
+**3) Terminal - Clonar Projeto do Repositório Remoto para sua Máquina**<br/>
 `git clone git@github.com:rosadevsolutions/2025-vainaweb-sispar.git`
 
-4) Terminal - Acessar o Diretório/Pasta Específica do Projeto<br/>
+**4) Terminal - Acessar o Diretório/Pasta Específica do Projeto**<br/>
 `cd 2025-vainaweb-sispar.git`
 
-5) Terminal - Instalar no Projeto os Pacotes Gerais de Dependências de Desenvolvimento<br/>
+**5) Terminal - Instalar no Projeto os Pacotes Gerais de Dependências de Desenvolvimento**<br/>
 `npm install`
 
-6) Terminal - Instalar no Projeto o Pacote de Desenvolvimento Sass (Pré-processador CSS)<br/>
+**6) Terminal - Instalar no Projeto o Pacote de Desenvolvimento Sass (Pré-processador CSS)**<br/>
 `npm install sass`
 
-7) Terminal - Instalar no Projeto o Pacote de Desenvolvimento Router (Rotas das Páginas)<br/>
+**7) Terminal - Instalar no Projeto o Pacote de Desenvolvimento Router (Rotas das Páginas)**<br/>
 `npm install react-router-dom`
 
-8) Terminal - Inicializar/Rodar Projeto em Ambiente Local<br/>
+**8) Terminal - Inicializar/Rodar Projeto em Ambiente Local**<br/>
 `npm run dev`
 
 ---
