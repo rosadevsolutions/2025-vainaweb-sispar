@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import "./Breadcrumb.module.scss"
+import styles from "./Breadcrumb.module.scss"
 
 export default function Breadcrumb(props) {
   const navigate = useNavigate()
@@ -7,12 +7,21 @@ export default function Breadcrumb(props) {
     navigate("/")
   }
 
+  const irReembolsos = () => {
+    navigate("/reembolsos")
+  }
+
   return (
-    <div className="breadcrumb__wrapper">
-      <ul className="breadcrumb__list">
-        <li className="breadcrumb__item--home" onClick={ irHome }>Home</li>
-        <li className="breadcrumb__item--page">
-          <p>{ props.actualPage }</p>
+    <div className={styles.breadcrumb__wrapper}>
+      <ul className={styles.breadcrumb__list}>
+        <li className={styles.breadcrumb__item__home} onClick={ irHome }>Home</li>
+        { props.page === "Reembolsos" ?
+          <li className={styles.breadcrumb__item__page} onClick={ irReembolsos }>
+            <p>{ props.page }</p>
+          </li> : null
+        }
+        <li className={styles.breadcrumb__item__activepage}>
+          <p>{ props.activePage }</p>
         </li>
       </ul>
     </div>
