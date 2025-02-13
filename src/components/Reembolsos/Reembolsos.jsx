@@ -3,7 +3,7 @@ import Breadcrumb from "../Breadcrumb/Breadcrumb"
 export default function Reembolsos() {
   return (
     <div>
-      <Breadcrumb actualpage="Reembolsos" />
+      <Breadcrumb activePage="Reembolsos" />
       <section>
         Component Reembolsos
       </section>
