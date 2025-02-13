@@ -1,5 +1,12 @@
+import PropTypes from "prop-types"
 import { useNavigate } from "react-router-dom"
 import styles from "./Breadcrumb.module.scss"
+
+Breadcrumb.propTypes = {
+  page : PropTypes.string,
+  activePage : PropTypes.string.isRequired
+}
+
 
 export default function Breadcrumb(props) {
   const navigate = useNavigate()
