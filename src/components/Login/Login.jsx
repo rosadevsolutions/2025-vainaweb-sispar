@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom"
+import LoginBackgroud from "../../assets/Login/navio-cargueiro-wilson-sons.png"
+import ButtonLogin from "../ButtonLogin/ButtonLogin"
+import ButtonText from "../ButtonText/ButtonText"
 import styles from "./Login.module.scss"
-
 
 export default function Login (){
 
@@ -17,19 +19,33 @@ const irSolicitacao = () => {
 
 
   return (
-    <main className={styles.loginWrapper}>
-      <section className={styles.fotoWrapper}>
-      </section>
+    <main className ={ styles.login__wrapper }>
+      <img src = { LoginBackgroud } className ={ styles.login__background } />
 
-      <section className={styles.formWrapper}>
-        <div>
-          <h1>Boas vindas ao novo portal SISPAR</h1>
-          <p>Sistema der Emissão de Boletos e Parcelamento</p>
-        </div>
+      <section className = { styles.login__content }>
+        <div className = { styles.login__contentWrapper }>
+          <div className = { styles.login__texts }>
+            <h1 className = { styles.login__brand }>Wilson Sons</h1>
+            <h2 className = { styles.login__welcome }>Boas vindas ao Novo Portal SISPAR</h2>
+            <p  className = { styles.login__systemName }>Sistema de Emissão de Boletos e Parcelamento</p>
+          </div>
 
-        <div>
-          <button onClick={ irReembolso }>Entrar</button>
-          <button onClick={ irSolicitacao }>Criar Conta</button>
+          <form className = { styles.form__wrapper }>
+            <div>
+              <input type="text" placeholder="E-mail" />
+            </div>
+            <div>
+              <input type="text" placeholder="Senha" />
+            </div>
+            <ButtonText cta = "Esqueci minha senha" onClick = { irSolicitacao }/>
+
+          </form>
+
+          <div className = { styles.buttons__wrapper }>
+            <ButtonLogin cta = "Entrar" onClick = { irReembolso } />
+            <ButtonLogin cta = "Criar conta" onClick = { irSolicitacao }/>
+          </div>
+
         </div>
       </section>
 
