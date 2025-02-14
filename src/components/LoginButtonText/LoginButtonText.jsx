@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
-import styles from "./ButtonText.module.scss";
+import styles from "./LoginButtonText.module.scss";
 
-ButtonText.propTypes = {
+LoginButtonText.propTypes = {
   onClick : PropTypes.string,
   cta : PropTypes.string
 }
 
-export default function ButtonText (props){
+export default function LoginButtonText (props){
   return (
     <button
     type="button"
-    className = { styles.buttonText__item }
+    className = { styles.loginButtonText }
     onClick = { props.onClick }>
       { props.cta }
     </button>
