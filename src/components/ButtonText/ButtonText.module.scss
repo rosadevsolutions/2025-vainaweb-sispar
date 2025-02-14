@@ -1,0 +1,15 @@
+.buttonText__item{
+  background-color: transparent;
+  border: none;
+  color: #23282F;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  transition: color .5s;
+
+  &:hover{
+    color: #0844C4;
+  }
+}
