@@ -38,14 +38,14 @@
   }
 
   &__brand{
-    background: url("../../assets/Login/wilson-sons-brand.svg");
+    background: url("../../assets/Login/wilson_sons_brand.svg");
+    background-repeat: no-repeat;
     display: inline-block;
     height: 5.23rem;
     line-height: 1;
     margin-bottom: 1.6rem;
     text-indent: -9999px;
     width: 11.62rem;
-    border: 1px solid red;
   }
 
   &__welcome{
