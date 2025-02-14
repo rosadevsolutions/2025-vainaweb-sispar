@@ -1,4 +1,4 @@
-.buttonLogin__item{
+.loginButton{
   border: none;
   border-radius: 0.6rem;
   color: #FFF;
@@ -7,5 +7,8 @@
   font-size: 1.6rem;
   font-weight: 700;
   height: 5.5rem;
+  margin-bottom: 0.8rem;
   padding: 2rem;
+  width: 12.7rem;
+  transition: background-color 2s;
 }
