@@ -1,3 +1,4 @@
+/* RESET CSS */
 *,
 *:after,
 *:before {
@@ -69,3 +70,26 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   text-wrap: balance;
 }
+/* RESET CSS - FIM */
+
+/* VARIAVEIS CSS */
+html {
+  --color-black: #000000;
+  --color-blue1: #001A3D;
+  --color-blue2: #0844C4;
+  --color-blue3: #00BEDD;
+  --color-blue4: #00ACC7;
+  --color-velvet: #A60B2F;
+  --color-grey1: #F1F4F9;
+  --color-grey2: #CBD4E1;
+  --color-grey3: #63758D;
+  --color-grey4: #23282F;
+  --color-grey5: #898D93;
+  --color-white: #FFFFFF;
+  --size-1: 0.4rem;
+  --size-2: 0.8rem;
+  --size-3: 1.6rem;
+  --size-4: 3.2rem;
+  --size-5: 6.4rem;
+}
+/* VARIAVEIS CSS - FIM*/
