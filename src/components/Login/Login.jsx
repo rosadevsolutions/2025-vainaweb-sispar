@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom"
 import LoginBackgroud from "../../assets/Login/navio-cargueiro-wilson-sons.png"
-import ButtonLogin from "../ButtonLogin/ButtonLogin"
-import ButtonText from "../ButtonText/ButtonText"
+import LoginForm from "../../components/LoginForm/LoginForm"
+import LoginInput from "../../components/LoginInput/LoginInput"
+import LoginButton from "../LoginButton/LoginButton"
+import LoginButtonText from "../LoginButtonText/LoginButtonText"
 import styles from "./Login.module.scss"
 
-export default function Login (){
+export default function Login(){
 
   const navigate = useNavigate()
 
@@ -30,20 +32,15 @@ const irSolicitacao = () => {
             <p  className = { styles.login__systemName }>Sistema de Emissão de Boletos e Parcelamento</p>
           </div>
 
-          <form className = { styles.form__wrapper }>
-            <div>
-              <input type="text" placeholder="E-mail" />
-            </div>
-            <div>
-              <input type="text" placeholder="Senha" />
-            </div>
-            <ButtonText cta = "Esqueci minha senha" onClick = { irSolicitacao }/>
-
-          </form>
+          <LoginForm>
+            <LoginInput placeholder = "Email" />
+            <LoginInput placeholder = "Senha" />
+            <LoginButtonText cta = "Esqueci minha senha" onClick = { irSolicitacao }/>
+          </LoginForm>
 
           <div className = { styles.buttons__wrapper }>
-            <ButtonLogin cta = "Entrar" onClick = { irReembolso } />
-            <ButtonLogin cta = "Criar conta" onClick = { irSolicitacao }/>
+            <LoginButton cta = "Entrar" onClick = { irReembolso } />
+            <LoginButton cta = "Criar conta" onClick = { irSolicitacao }/>
           </div>
 
         </div>
