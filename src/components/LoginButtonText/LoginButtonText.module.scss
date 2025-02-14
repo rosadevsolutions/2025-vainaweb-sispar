@@ -1,16 +1,16 @@
 .loginButtonText{
   background-color: transparent;
   border: none;
-  color: #23282F;
+  color: var(--color-grey4);
   cursor: pointer;
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 400;
-  margin-top: 0.4rem;
+  margin-top: var(--size-1);
   text-align: center;
   transition: color .5s;
 
   &:hover{
-    color: #0844C4;
+    color: var(--color-blue2);
   }
 }

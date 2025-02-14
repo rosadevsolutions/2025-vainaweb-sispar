@@ -27,13 +27,13 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 3.2rem;
+    gap: var(--size-4);
     justify-content: center;
     width: 36.8rem;
   }
 
   &__texts{
-    align-items: center;     ;
+    align-items: center;
     display: flex;
     flex-direction: column;
   }
@@ -44,22 +44,22 @@
     display: inline-block;
     height: 5.23rem;
     line-height: 1;
-    margin-bottom: 1.6rem;
+    margin-bottom: var(--size-3);
     text-indent: -9999px;
     width: 11.62rem;
   }
 
   &__welcome{
-    color: #23282F;
+    color: var(--color-grey4);
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 3.873rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: var(--size-2);
     text-align: center;
   }
 
   &__systemName{
-    color: #0844C4;
+    color: var(--color-blue2);
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.936rem;
@@ -71,7 +71,7 @@
   &__wrapper{
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: var(--size-2);
     justify-content: center;
   }
 }

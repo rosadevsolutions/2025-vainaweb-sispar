@@ -1,7 +1,7 @@
 .breadcrumb{
 
   &__wrapper{
-    padding: .5rem 0;
+    padding: 0.4rem 0;
   }
 
   &__list{
@@ -26,7 +26,6 @@
       font-size: 1.4rem;
       font-weight: 400;
 
-
       &::before{
         display: block;
         background: url("../../assets/Breadcrumb/icon-arrow.svg") no-repeat;
@@ -36,13 +35,13 @@
     }
 
     &__page{
-      color: #CBD4E1;
+      color: var(--color-grey2);
       cursor: pointer;
       display: inline-block;
     }
 
     &__activepage{
-      color: #000
+      color: #000000;
     }
   }
 }
