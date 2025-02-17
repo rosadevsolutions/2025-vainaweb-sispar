@@ -12,10 +12,10 @@ import styles from "./Reembolsos.module.scss"
 export default function Reembolsos() {
   return (
     <div className={styles.page__wrapper}>
-      <aside className="aside__wrapper">
+      <aside className={styles.aside__wrapper}>
         Aside
       </aside>
-      <div className={styles.page__wrapper}>
+      <div className={styles.page__content}>
         <Breadcrumb activePage={`Reembolsos`} />
 
         <main className={styles.main__wrapper}>
