@@ -45,7 +45,7 @@ export default function Reembolsos() {
 
             <section className={styles.report__wrapper}>
               <article className={styles.report__card}>
-                <div className={styles.report__icon__wrapper}>
+                <div className={styles.report__box__solicitados}>
                   <img src={IconSolicitados} className={styles.report__icon} alt="ícone solitados" title="Solicitados" />
                 </div>
                 <p className={styles.report__value}>182</p>
@@ -53,7 +53,7 @@ export default function Reembolsos() {
               </article>
 
               <article className={styles.report__card}>
-                <div className={styles.report__icon__wrapper}>
+                <div className={styles.report__box__analise}>
                   <img src={IconAnalise} className={styles.report__icon} alt="ícone em análise" title="Em análise" />
                 </div>
                 <p className={styles.report__value}>74</p>
@@ -61,7 +61,7 @@ export default function Reembolsos() {
               </article>
 
               <articles className={styles.report__card}>
-                <div className={styles.report__icon__wrapper}>
+                <div className={styles.report__box__aprovados}>
                   <img src={IconAprovados} className={styles.report__icon} alt="ícone aprovados" title="Aprovados" />
                 </div>
                 <p className={styles.report__value}>195</p>
@@ -69,7 +69,7 @@ export default function Reembolsos() {
               </articles>
 
               <article className={styles.report__card}>
-                <div className={styles.report__icon__wrapper}>
+                <div className={styles.report__box__rejeitados}>
                   <img src={IconRejeitados} className={styles.report__icon} alt="ícone rejeitados" title="Rejeitados" />
                 </div>
                 <p className={styles.report__value}>41</p>
