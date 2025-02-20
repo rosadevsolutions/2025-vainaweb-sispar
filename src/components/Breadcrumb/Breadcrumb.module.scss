@@ -1,7 +1,7 @@
 .breadcrumb{
 
   &__wrapper{
-    padding: 0.4rem 0;
+    padding: 3.2rem 0 0.4rem 0;
   }
 
   &__list{
@@ -13,12 +13,12 @@
 
   &__item{
     &__home{
+      background: url("../../assets/Breadcrumb/icon-home.svg");
       cursor: pointer;
       display: inline-block;
-      width: 1.4rem;
       height: 1.575rem;
-      background: url("../../assets/Breadcrumb/icon-home.svg");
       text-indent: -9999px;
+      width: 1.4rem;
     }
 
     &__page,
@@ -26,12 +26,12 @@
       font-size: 1.4rem;
       font-weight: 400;
 
-      &::before{
-        display: block;
-        background: url("../../assets/Breadcrumb/icon-arrow.svg") no-repeat;
-        width: 0.6rem;
-        height: 1rem;
-      }
+    &::before{
+      background: url("../../assets/Breadcrumb/icon-arrow.svg") no-repeat;
+      display: block;
+      height: 1rem;
+      width: 0.6rem;
+    }
     }
 
     &__page{
@@ -41,7 +41,7 @@
     }
 
     &__activepage{
-      color: #000000;
+      color: var(--color-black);
     }
   }
 }
