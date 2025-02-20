@@ -7,14 +7,13 @@ import IconSolicitarReembolso from "../../assets/Reembolsos/icon-solicitar.svg"
 import IconStatus from "../../assets/Reembolsos/icon-status.svg"
 import IconVerificarAnalises from "../../assets/Reembolsos/icon-verificar.svg"
 import Breadcrumb from "../Breadcrumb/Breadcrumb"
+import NavBar from "../NavBar/NavBar"
 import styles from "./Reembolsos.module.scss"
 
 export default function Reembolsos() {
   return (
     <div className={styles.page__wrapper}>
-      <aside className={styles.aside__wrapper}>
-        Aside
-      </aside>
+      <NavBar />
       <div className={styles.page__content}>
         <Breadcrumb activePage={`Reembolsos`} />
 
