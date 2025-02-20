@@ -1,12 +1,19 @@
 import Breadcrumb from "../Breadcrumb/Breadcrumb"
+import NavBar from "../NavBar/NavBar"
+import styles from "./Solicitacao.module.scss"
 
 export default function Solicitacao() {
   return (
-    <div>
-      <Breadcrumb page="Reembolsos" activePage={`Solicitação de Reembolso`} />
-      <section>
-        Component Solicitação
-      </section>
+    <div className={styles.page__wrapper}>
+      <NavBar />
+      <div className={styles.page__content}>
+        <Breadcrumb activePage={`Solicitação`} />
+
+        <main className={styles.main__wrapper}>
+          <div className={styles.main__content}>
+          </div>
+        </main>
+      </div>
     </div>
   )
 }
