@@ -1,6 +1,7 @@
 .page{
   &__wrapper{
     display: flex;
+    height: 100vh;
     width: 100vw;
   }
 
@@ -9,11 +10,6 @@
     flex-direction: column;
     width: 95%;
   }
-}
-
-.aside__wrapper{
-  heigth: 100vh;
-  width: 5%;
 }
 
 .main {
@@ -30,7 +26,6 @@
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
-    height: 46%;
     width: 51.25%;
   }
 }
@@ -72,6 +67,7 @@
     gap: 1.6rem;
     height: 20.9rem;
     justify-content: center;
+    padding: 1.6rem;
     transition: border .5s        ;
     width: 31.5%;
 
