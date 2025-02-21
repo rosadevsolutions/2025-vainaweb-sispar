@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import IconAnalise from "../../assets/Reembolsos/icon-analise.svg"
 import IconAprovados from "../../assets/Reembolsos/icon-aprovados.svg"
-import IconHistorico from "../../assets/Reembolsos/icon-historico.svg"
 import IconRejeitados from "../../assets/Reembolsos/icon-rejeitados.svg"
 import IconSolicitados from "../../assets/Reembolsos/icon-solicitados.svg"
 import IconSolicitarReembolso from "../../assets/Reembolsos/icon-solicitar.svg"
@@ -33,7 +32,7 @@ export default function Reembolsos() {
               </article>
 
               <article className={styles.services__card} onClick={ () => { navigate("/") } }>
-                <img src={IconHistorico} className={styles.services__icon} alt="ícone verificar análises" title="Verificar análises" />
+                <img src={IconAnalise} className={styles.services__icon} alt="ícone verificar análises" title="Verificar análises" />
                 <h3 className={styles.services__title}>Verificar Análises</h3>
               </article>
 
@@ -44,42 +43,44 @@ export default function Reembolsos() {
             </section>
 
             <section className={styles.report__wrapper}>
-              <article className={styles.report__card}>
-                <div className={styles.report__box__solicitados}>
-                  <img src={IconSolicitados} className={styles.report__icon} alt="ícone solitados" title="Solicitados" />
+              <article className={styles.report__card__wrapper}>
+                <div className={styles.report__card__square__solicitados}>
+                  <img src={IconSolicitados} className={styles.report__card__icon} alt="ícone solicitados" title="Solicitados" />
                 </div>
-                <p className={styles.report__value}>182</p>
-                <p className={styles.report__info}>Solicitados</p>
+                <p className={styles.report__card__value}>182</p>
+                <p className={styles.report__card__info}>Solicitados</p>
               </article>
 
-              <article className={styles.report__card}>
-                <div className={styles.report__box__analise}>
-                  <img src={IconAnalise} className={styles.report__icon} alt="ícone em análise" title="Em análise" />
+              <article className={styles.report__card__wrapper}>
+                <div className={styles.report__card__square__analise}>
+                  <img src={IconAnalise} className={styles.report__icon} alt="ícone em análise" title="Em Análise" />
                 </div>
-                <p className={styles.report__value}>74</p>
-                <p className={styles.report__info}>Em análise</p>
+                <p className={styles.report__card__value}>74</p>
+                <p className={styles.report__card__info}>Em análise</p>
               </article>
 
-              <articles className={styles.report__card}>
-                <div className={styles.report__box__aprovados}>
+              <article className={styles.report__card__wrapper}>
+                <div className={styles.report__card__square__aprovados}>
                   <img src={IconAprovados} className={styles.report__icon} alt="ícone aprovados" title="Aprovados" />
                 </div>
-                <p className={styles.report__value}>195</p>
-                <p className={styles.report__info}>Aprovados</p>
-              </articles>
-
-              <article className={styles.report__card}>
-                <div className={styles.report__box__rejeitados}>
-                  <img src={IconRejeitados} className={styles.report__icon} alt="ícone rejeitados" title="Rejeitados" />
-                </div>
-                <p className={styles.report__value}>41</p>
-                <p className={styles.report__info}>Rejeitados</p>
+                <p className={styles.report__card__value}>195</p>
+                <p className={styles.report__card__info}>Aprovados</p>
               </article>
+
+              <article className={styles.report__card__wrapper}>
+                <div className={styles.report__card__square__rejeitados}>
+                  <img src={IconRejeitados} className={styles.report__card__icon} alt="ícone rejeitados" title="Rejeitados" />
+                </div>
+                <p className={styles.report__card__value}>41</p>
+                <p className={styles.report__card__info}>Rejeitados</p>
+              </article>
+
+
             </section>
 
-            <section className="status__wrapper">
-              <img src={IconStatus} className="status__icon" alt="ícone sistema atualizado" title="Sistema atualizado" />
-              <p className="status__info">Sistema atualizado.</p>
+            <section className={styles.status__wrapper}>
+              <img src={IconStatus} className={styles.status__icon} alt="ícone sistema atualizado" title="Sistema atualizado" />
+              <p className={styles.status__info}>Sistema atualizado.</p>
             </section>
           </div>
         </main>
