@@ -1,7 +1,10 @@
 .breadcrumb{
 
   &__wrapper{
-    padding: 3.2rem 0 0.4rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    height: 10rem;
   }
 
   &__list{
