@@ -88,7 +88,7 @@ export default function Table() {
               </button>
             </td>
             <td>
-              <p>Samuel Silvero</p>
+              <p>Samuel Silverio</p>
             </td>
             <td>
               <p>Vai na Web</p>
@@ -142,7 +142,7 @@ export default function Table() {
               </button>
             </td>
             <td>
-              <p>Karine</p>
+              <p>Karynne Moreira</p>
             </td>
             <td>
               <p>Wilson Sons</p>
