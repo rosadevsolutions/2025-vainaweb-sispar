@@ -8,5 +8,9 @@
   font-weight: 700;
   height: 4.5rem;
   padding: 0 1.6rem;
-  transition: background-color 2s;
+  transition: opacity .5s;
+
+  &:hover{
+    opacity: .8;
+  }
 }
