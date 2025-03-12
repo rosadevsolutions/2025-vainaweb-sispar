@@ -1,8 +1,8 @@
 import IconMotivo from "../../assets/Solicitacao/icon-motivo.svg";
 import IconTrash from "../../assets/Solicitacao/icon-trash.svg";
-import styles from "./Table.module.scss";
+import styles from "./SolicitacaoTable.module.scss";
 
-export default function Table() {
+export default function SolicitacaoTable() {
   return (
     <div className={styles.table__wrapper}>
       <table className={styles.table__content}>
