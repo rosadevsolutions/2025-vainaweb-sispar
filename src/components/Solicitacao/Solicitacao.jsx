@@ -1,6 +1,7 @@
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import NavBar from "../NavBar/NavBar";
+import Table from "../Table/Table";
 import styles from "./Solicitacao.module.scss";
 
 export default function Solicitacao() {
@@ -26,7 +27,7 @@ export default function Solicitacao() {
                   </div>
 
                   <div className={`${styles.form__field} ${styles.form__field__prestacao}`}>
-                    <label className={styles.form__label}>N. Prest. Contas</label>
+                    <label className={styles.form__label}>Nº Prest. Contas</label>
                     <input className={`${styles.form__input} ${styles.form__input__prestacao}`} type="number" name="prestacaoContas" />
                   </div>
                 </div>
@@ -125,6 +126,7 @@ export default function Solicitacao() {
                 </div>
               </div>
             </form>
+            <Table />
           </div>
         </main>
       </div>
