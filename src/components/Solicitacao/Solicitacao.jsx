@@ -1,7 +1,8 @@
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import NavBar from "../NavBar/NavBar";
-import Table from "../Table/Table";
+import SolicitacaoButton from "../SolicitacaoButton/SolicitacaoButton";
+import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
 import styles from "./Solicitacao.module.scss";
 
 export default function Solicitacao() {
@@ -126,7 +127,17 @@ export default function Solicitacao() {
                 </div>
               </div>
             </form>
-            <Table />
+            <SolicitacaoTable />
+            <div>
+              <div>
+                Total Faturado
+              </div>
+              <div>
+                Total Despesa
+              </div>
+              <SolicitacaoButton cta="Enviar para Análise" />
+              <SolicitacaoButton cta="Cancelar Solicitação" />
+            </div>
           </div>
         </main>
       </div>
