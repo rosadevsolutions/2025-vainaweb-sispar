@@ -29,7 +29,7 @@ const irSolicitacao = () => {
         <div className = { styles.login__contentWrapper }>
           <div className = { styles.login__texts }>
             <h1 className = { styles.login__brand }>Wilson Sons</h1>
-            <h2 className = { styles.login__welcome }>Boas vindas ao Novo Portal SISPAR</h2>
+            <h2 className = { styles.login__welcome }>Boas Vindas ao Novo Portal SISPAR</h2>
             <p  className = { styles.login__systemName }>Sistema de Emissão de Boletos e Parcelamento</p>
           </div>
 
