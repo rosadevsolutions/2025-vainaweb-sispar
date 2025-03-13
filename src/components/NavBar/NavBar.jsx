@@ -30,15 +30,15 @@ export default function NavBar() {
               <img className={styles.tools__icon} src={IconHome} alt="Home" title="Home"/>
             </button>
 
-            <button className={styles.tools__button} onClick={ () => { navigate("/solicitacao") } }>
-              <img className={styles.tools__icon} src={IconReembolso} alt="Reembolso" title="Reembolso"/>
+            <button className={styles.tools__button} onClick={ () => { navigate("/reembolsos") } }>
+              <img className={styles.tools__icon} src={IconReembolso} alt="Reembolsos" title="Reembolsos"/>
             </button>
 
-            <button className={styles.tools__button} onClick={ () => { navigate("/busca") } }>
+            <button className={styles.tools__button} onClick={ () => { navigate("/solicitacao") } }>
               <img className={styles.tools__icon} src={IconSearch} alt="Busca" title="Busca" />
             </button>
 
-            <button className={styles.tools__button} onClick={ () => { navigate("/history") } }>
+            <button className={styles.tools__button} onClick={ () => { navigate("/") } }>
               <img className={styles.tools__icon} src={IconHistory} alt="Histórico" title="Histórico" />
             </button>
           </div>
