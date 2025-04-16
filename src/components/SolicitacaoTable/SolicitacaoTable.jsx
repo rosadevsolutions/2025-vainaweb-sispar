@@ -2,6 +2,60 @@ import IconMotivo from "../../assets/Solicitacao/icon-motivo.svg";
 import IconTrash from "../../assets/Solicitacao/icon-trash.svg";
 import styles from "./SolicitacaoTable.module.scss";
 
+const rawData = [
+  {
+    colaborador: "Romulo Rosa",
+    empresa: "Rosadev Solutions",
+    numeroPrestacao: "329456",
+    data: "2025-03-10",
+    descricao: true,
+    tipoDespesa: "Desp. de viagem administrativa",
+    centroCusto: "1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ",
+    ordemInterna: "0003",
+    divisao: "002",
+    pep: "001",
+    moeda: "BRL",
+    distanciaKm: 434,
+    ValorKm: 0.65,
+    valorFaturado: 242.10,
+    despesa: 40.05
+  },
+  {
+    colaborador: "Samuel Silvério",
+    empresa: "Vai na Web",
+    numeroPrestacao: "987789",
+    data: "2025-03-09",
+    descricao: true,
+    tipoDespesa: "Desp. de viagem administrativa",
+    centroCusto: "1100110102 - FIN CONTABILIDADE MTZ",
+    ordemInterna: "0002",
+    divisao: "005",
+    pep: "001",
+    moeda: "ARS",
+    distanciaKm: 289,
+    ValorKm: 0.37,
+    valorFaturado: 106.93,
+    despesa: 0.00
+  },
+  {
+    colaborador: "Karynne Moreira",
+    empresa: "Wilson Sons",
+    numeroPrestacao: "546791",
+    data: "2025-03-08",
+    descricao: true,
+    tipoDespesa: "Eventos de prestação",
+    centroCusto: "1100109002 - FIN CONTROLES INTERNOS MTZ",
+    ordemInterna: "0001",
+    divisao: "005",
+    pep: "001",
+    moeda: "USD",
+    distanciaKm: 197,
+    ValorKm: 0.75,
+    valorFaturado: 109.75,
+    despesa: 29.97
+  }
+]
+
 export default function SolicitacaoTable() {
   return (
     <div className={styles.table__wrapper}>
