@@ -4,7 +4,7 @@ import styles from "./SolicitacaoForm.module.scss";
 
 
 export default function SolicitacaoForm (){
-  const [nome, setNome] = useState(""); // Estado para o campo colaborador
+  const [colaborador, setColaborador] = useState(""); // Estado para o campo colaborador
   const [empresa, setEmpresa] = useState(""); // Estado para o campo empresa
   const [numeroPrestacao, setNumeroPrestacao] = useState(""); // Estado para o campo número de prestação
   const [descricao, setDescricao] = useState(""); // Estado para o campo  descrição
@@ -24,7 +24,7 @@ export default function SolicitacaoForm (){
 
   const handleSubmit = () => {
     const objetoReembolso = {
-      nome,
+      colaborador,
       empresa,
       numeroPrestacao,
       descricao,
@@ -54,10 +54,10 @@ export default function SolicitacaoForm (){
             <label className={styles.form__label}>Nome Completo</label>
             <input
               className={`${styles.form__input} ${styles.form__input__nome}`}
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
+              value={colaborador}
+              onChange={(e) => setColaborador(e.target.value)}
               type="text"
-              name="nomeCompleto"
+              name="colaborador"
             />
           </div>
 
