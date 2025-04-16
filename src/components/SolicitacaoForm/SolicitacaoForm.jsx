@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
+import Api from "../../services/Api";
 import styles from "./SolicitacaoForm.module.scss";
 
 
@@ -64,7 +65,30 @@ export default function SolicitacaoForm (){
       setDespesa("");
   };
 
+  //Função assincrona para o código esperar sem travar o restante da app.
+  const enviarParaAnalise = async () => {
+    // Tentativa de execução
+    try{
+      // Criar uma var pra receber a response/resposta a url vai esperar o post da api (caminho/rota/blueprint, argumento/lista/a ser enviado)
+      //Faz requisição POST pro endpoint/refunds/new
+      //Envia os dados salvos no estado dadosReembolso
+      const response = await Api.post("/refunds/new", dadosReembolso);
+      console.log("Resposta da API: ", response)
+      alert("Reembolso solicitado com sucesso")
+      //Só vai enviar os dados se trocar o estado de enviado para true
+      setEnviado(true)
+    } catch(error){ //caso de
+      console.log("Erro ao Enviar: ", error)
+    }
+  }
 
+  //HOOK USEEFFCT - Reagir a mudanças de states
+  useEffect(() => {
+    if(enviado){ //se tiver enviado
+      setDadosReembolso([]); // limpar dados do form
+      setEnviado(false); // o state enviado volta a ser false
+    }
+  },[enviado]); //Esse efeito só inicializa quando enviado mudar
 
   return (
     <form
@@ -330,7 +354,7 @@ export default function SolicitacaoForm (){
               value="salvar"
             >
             + Salvar
-          </button>
+            </button>
             <button
               className={`${styles.form__button} ${styles.form__field__limpar}`}
               onClick={limparCampos}
@@ -343,6 +367,11 @@ export default function SolicitacaoForm (){
                 alt="Delete"
                 title="Delete"
               />
+            </button>
+            <button
+              onClick={enviarParaAnalise}
+            >
+            Enviar para Análise
             </button>
           </div>
         </div>
