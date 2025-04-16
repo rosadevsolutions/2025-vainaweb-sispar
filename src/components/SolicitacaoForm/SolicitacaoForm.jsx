@@ -6,7 +6,7 @@ import styles from "./SolicitacaoForm.module.scss";
 export default function SolicitacaoForm (){
   const [nome, setNome] = useState(""); // Estado para o campo colaborador
   const [empresa, setEmpresa] = useState(""); // Estado para o campo empresa
-  const [nPrestacao, setnPrestacao] = useState(""); // Estado para o campo número de prestação
+  const [numeroPrestacao, setNumeroPrestacao] = useState(""); // Estado para o campo número de prestação
   const [descricao, setDescricao] = useState(""); // Estado para o campo  descrição
   const [data, setData] = useState(""); // Estado para o campo dataAVANÇADO UTILIZANDO MODAL
   const [tipoDespesa, setTipoDespesa] = useState(""); // Estado para o campo tipo de reembolso
@@ -26,7 +26,7 @@ export default function SolicitacaoForm (){
     const objetoReembolso = {
       nome,
       empresa,
-      nPrestacao,
+      numeroPrestacao,
       descricao,
       data,
       tipoDespesa,
@@ -76,8 +76,8 @@ export default function SolicitacaoForm (){
             <label className={styles.form__label}>Nº Prest. Contas</label>
             <input
               className={`${styles.form__input} ${styles.form__input__prestacao}`}
-              value={nPrestacao}
-              onChange={(e) => setnPrestacao(e.target.value)}
+              value={numeroPrestacao}
+              onChange={(e) => setNumeroPrestacao(e.target.value)}
               type="number"
               name="prestacaoContas"
             />
@@ -216,7 +216,7 @@ export default function SolicitacaoForm (){
                 value={ordemInterna}
                 onChange={(e) => setOrdemInterna(e.target.value)}
                 type="text"
-                name="ordint"
+                name="ordemInterna"
               />
             </div>
 
@@ -227,7 +227,7 @@ export default function SolicitacaoForm (){
                 value={divisao}
                 onChange={(e) => setDivisao(e.target.value)}
                 type="text"
-                name="div"
+                name="divisao"
               />
             </div>
 
