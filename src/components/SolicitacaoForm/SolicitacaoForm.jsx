@@ -21,6 +21,7 @@ export default function SolicitacaoForm (){
   const [despesa, setDespesa] = useState(""); // Estado para o campo despesa
 
   const [dadosReembolso, setDadosReembolso] = useState([]); // Estado para o campo Dados de Reembolso
+  const [enviado, setEnviado] = useState(false); // State pra asber se o campo foi enviado
 
   const handleSubmit = () => {
     const objetoReembolso = {
@@ -42,6 +43,8 @@ export default function SolicitacaoForm (){
     }
     setDadosReembolso(dadosReembolso.concat(objetoReembolso))
   }
+
+
 
   return (
     <form
