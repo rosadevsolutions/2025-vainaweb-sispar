@@ -44,6 +44,25 @@ export default function SolicitacaoForm (){
     setDadosReembolso(dadosReembolso.concat(objetoReembolso))
   }
 
+  const limparCampos = () => {
+    setColaborador(""),
+      setEmpresa(""),
+      setNumeroPrestacao(""),
+      setDescricao(""),
+      setData(""),
+      setDescricao(""),
+      setTipoDespesa(""),
+      setCentroCusto(""),
+      setOrdemInterna(""),
+      setDivisao(""),
+      setPep(""),
+      setMoeda(""),
+      setDistanciaKm(""),
+      setValorKm(""),
+      setValorFaturado(""),
+      setDespesa("");
+  };
+
 
 
   return (
@@ -313,6 +332,7 @@ export default function SolicitacaoForm (){
           </button>
             <button
               className={`${styles.form__button} ${styles.form__field__limpar}`}
+              onClick={limparCampos}
               type="submit"
               name="limpar"
               value="limpar"
