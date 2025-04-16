@@ -42,6 +42,7 @@ export default function SolicitacaoForm (){
       despesa
     }
     setDadosReembolso(dadosReembolso.concat(objetoReembolso))
+    limparCampos()
   }
 
   const limparCampos = () => {
