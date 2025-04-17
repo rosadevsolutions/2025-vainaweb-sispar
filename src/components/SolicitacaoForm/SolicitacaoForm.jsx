@@ -194,7 +194,7 @@ export default function SolicitacaoForm (){
             <div className={`${styles.form__field} ${styles.form__field__tiposdespesas}`}>
               <label
                 className={styles.form__label}
-                htmlFor="tipodespesas"
+                htmlFor="tipodespesa"
               >
                 Tipos de Despesas
               </label>
@@ -202,7 +202,7 @@ export default function SolicitacaoForm (){
                 className={`${styles.form__select} ${styles.form__select__tiposdespesas}`}
                 value={tipoDespesa}
                 onChange={(e) => setTipoDespesa(e.target.value)}
-                id="tipodespesas"
+                id="tipodespesa"
               >
                 <option
                   className={`${styles.form__option} ${styles.form__option__tiposdespesas}`}
@@ -256,36 +256,42 @@ export default function SolicitacaoForm (){
             </div>
 
             <div className={`${styles.form__field} ${styles.form__field__centrocustos}`}>
-              <label className={styles.form__label}>Centro de Custos</label>
+              <label
+                className={styles.form__label}
+                htmlFor="centrocusto"
+              >
+                Centro de Custos
+              </label>
               <select
                 className={styles.form__select}
                 value={centroCusto}
                 onChange={(e) => setCentroCusto(e.target.value)}
+                id="centrocusto"
               >
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value=""
                   disabled selected hidden
                 >
-                Selecionar
+                  Selecionar
                 </option>
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value="controlesInternos"
                 >
-                1100109002 - FIN CONTROLES INTERNOS MTZ
+                  1100109002 - FIN CONTROLES INTERNOS MTZ
                 </option>
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value="vicePresidenciaFinancas"
                 >
-                1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ
+                  1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ
                 </option>
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value="contabilidade"
                 >
-                1100110102 - FIN CONTABILIDADE MTZ
+                  1100110102 - FIN CONTABILIDADE MTZ
                 </option>
               </select>
             </div>
@@ -295,90 +301,138 @@ export default function SolicitacaoForm (){
           <div className={styles.form__container2__bottom}>
             <div className={styles.form__container2__bottom__left}>
               <div className={`${styles.form__field} ${styles.form__field__ordeminterna}`}>
-                <label className={styles.form__label}>Ord. Int.</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="ordeminterna"
+                >
+                  Ord. Int.
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__ordeminterna}`}
                   value={ordemInterna}
                   onChange={(e) => setOrdemInterna(e.target.value)}
                   type="text"
-                  name="ordemInterna"
+                  name="ordeminterna"
+                  id="ordeminterna"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__divisao}`}>
-                <label className={styles.form__label}>Div.</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="divisao"
+                >
+                  Div.
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__divisao}`}
                   value={divisao}
                   onChange={(e) => setDivisao(e.target.value)}
                   type="text"
                   name="divisao"
+                  id="divisao"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__pep}`}>
-                <label className={styles.form__label}>PEP</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="pep"
+                >
+                  PEP
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__pep}`}
                   value={pep}
                   onChange={(e) => setPep(e.target.value)}
                   type="text"
                   name="pep"
+                  id="pep"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__moeda}`}>
-                <label className={styles.form__label}>Moeda</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="moeda"
+                >
+                  Moeda
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__moeda}`}
                   value={moeda}
                   onChange={(e) => setMoeda(e.target.value)}
-                  type="text"
+                  type="number"
                   name="moeda"
+                  id="moeda"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__distanciakm}`}>
-                <label className={styles.form__label}>Dist / Km</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="distanciakm"
+                >
+                  Dist / Km
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__distanciakm}`}
                   value={distanciaKm}
                   onChange={(e) => setDistanciaKm(e.target.value)}
-                  type="text"
-                  name="distkm"
+                  type="number"
+                  name="distanciakm"
+                  id="distanciakm"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__valorkm}`}>
-                <label className={styles.form__label}>Valor / Km</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="valorkm"
+                >
+                  Valor / Km
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__valorkm}`}
                   value={valorKm}
                   onChange={(e) => setValorKm(e.target.value)}
-                  type="text"
+                  type="number"
                   name="valorkm"
+                  id="valorkm"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__valorfaturado}`}>
-                <label className={styles.form__label}>Val. Faturado</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="valorfaturado"
+                >
+                  Val. Faturado
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__valorfaturado}`}
                   value={valorFaturado}
                   onChange={(e) => setValorFaturado(e.target.value)}
-                  type="text"
+                  type="number"
                   name="valorfaturado"
+                  htmlFor="valortfaturado"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__despesas}`}>
-                <label className={styles.form__label}>Despesas</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="despesas"
+                >
+                  Despesas
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__despesas}`}
                   value={despesa}
                   onChange={(e) => setDespesa(e.target.value)}
-                  type="text"
+                  type="number"
                   name="despesas"
+                  id="despesas"
                 />
               </div>
             </div>
