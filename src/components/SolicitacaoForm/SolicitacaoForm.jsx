@@ -6,25 +6,28 @@ import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
 import styles from "./SolicitacaoForm.module.scss";
 
 
-export default function SolicitacaoForm (){
-  const [colaborador, setColaborador] = useState(""); // Estado para o campo colaborador
-  const [empresa, setEmpresa] = useState(""); // Estado para o campo empresa
-  const [numeroPrestacaoContas, setNumeroPrestacaoContas] = useState(""); // Estado para o campo número de prestação
-  const [descricao, setDescricao] = useState(""); // Estado para o campo  descrição
-  const [data, setData] = useState(""); // Estado para o campo dataAVANÇADO UTILIZANDO MODAL
-  const [tipoDespesa, setTipoDespesa] = useState(""); // Estado para o campo tipo de reembolso
-  const [centroCusto, setCentroCusto] = useState(""); // Estado para o campo centro de custo
-  const [ordemInterna, setOrdemInterna] = useState(""); // Estado para o campo ordem interna
-  const [divisao, setDivisao] = useState(""); // Estado para o campo divisão
-  const [pep, setPep] = useState(""); // Estado para o campo pep
-  const [moeda, setMoeda] = useState(""); // Estado para o campo moeda
-  const [distanciaKm, setDistanciaKm] = useState(""); // Estado para o campo distância km
-  const [valorKm, setValorKm] = useState(""); // Estado para o campo valor km
-  const [valorFaturado, setValorFaturado] = useState(""); // Estado para o campo valor faturado
-  const [despesa, setDespesa] = useState(""); // Estado para o campo despesa
+export default function SolicitacaoForm({onCreate}){
+  // Estados referente a cada campo do form
+  const [colaborador, setColaborador] = useState("");
+  const [empresa, setEmpresa] = useState("");
+  const [numeroPrestacaoContas, setNumeroPrestacaoContas] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [data, setData] = useState("");
+  const [tipoDespesa, setTipoDespesa] = useState("");
+  const [centroCusto, setCentroCusto] = useState("");
+  const [ordemInterna, setOrdemInterna] = useState("");
+  const [divisao, setDivisao] = useState("");
+  const [pep, setPep] = useState("");
+  const [moeda, setMoeda] = useState("");
+  const [distanciaKm, setDistanciaKm] = useState("");
+  const [valorKm, setValorKm] = useState("");
+  const [valorFaturado, setValorFaturado] = useState("");
+  const [despesa, setDespesa] = useState("");
 
-  const [dadosReembolso, setDadosReembolso] = useState([]); // Estado para o campo Dados de Reembolso
-  const [enviado, setEnviado] = useState(false); // State pra asber se o campo foi enviado
+  const [dadosReembolso, setDadosReembolso] = useState([]);
+
+  const [enviado, setEnviado] = useState(false);
+
 
   const handleSubmit = () => {
     const objetoReembolso = {
@@ -92,11 +95,32 @@ export default function SolicitacaoForm (){
     }
   },[enviado]); //Esse efeito só inicializa quando enviado mudar
 
+  const onSubmitCallback = (e) => {
+    e.preventDefault()
+    onCreate({
+      colaborador,
+      empresa,
+      numeroPrestacaoContas,
+      descricao,
+      data,
+      tipoDespesa,
+      ordemInterna,
+      centroCusto,
+      divisao,
+      pep,
+      moeda,
+      distanciaKm,
+      valorKm,
+      valorFaturado,
+      despesa
+    })
+  }
+
   return (
     <>
       <form
       className={styles.form__wrapper}
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={onSubmitCallback}
       >
         <div className={styles.form__container1}>
           <div className={styles.form__container1__top}>
