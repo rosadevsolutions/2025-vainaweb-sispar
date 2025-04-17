@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
 import Api from "../../services/Api";
+import SolicitacaoButton from "../SolicitacaoButton/SolicitacaoButton";
 import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
-import SolicitacaoTotals from "../SolicitacaoTotals/SolicitacaoTotals";
 import styles from "./SolicitacaoForm.module.scss";
 
 
@@ -406,17 +406,28 @@ export default function SolicitacaoForm (){
                   title="Delete"
                 />
               </button>
-              <button
-                onClick={enviarParaAnalise}
-              >
-              Enviar para Análise
-              </button>
             </div>
           </div>
         </div>
       </form>
+
       <SolicitacaoTable />
-      <SolicitacaoTotals />
+
+      <div className={styles.totals__wrapper}>
+      <div className={`${styles.totals__content} ${styles.totals__content__totalfaturado}`}>
+        <p className={styles.totals__label}>Total Faturado</p>
+        <div className={styles.totals__out}>458.78</div>
+      </div>
+      <div className={`${styles.totals__content} ${styles.totals__content__totaldespesa}`}>
+        <p className={styles.totals__label}>Total Despesa</p>
+        <div className={styles.totals__out}>70.02</div>
+      </div>
+      <SolicitacaoButton
+        cta="Enviar para Análise"
+        onClick={enviarParaAnalise}
+      />
+      <SolicitacaoButton cta="Cancelar Solicitação" />
+    </div>
     </>
   );
 }
