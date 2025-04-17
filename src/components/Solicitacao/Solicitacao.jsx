@@ -1,8 +1,6 @@
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import NavBar from "../NavBar/NavBar";
 import SolicitacaoForm from "../SolicitacaoForm/SolicitacaoForm";
-import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
-import SolicitacaoTotals from "../SolicitacaoTotals/SolicitacaoTotals";
 import styles from "./Solicitacao.module.scss";
 
 export default function Solicitacao() {
@@ -15,8 +13,6 @@ export default function Solicitacao() {
         <main className={styles.main__wrapper}>
           <div className={styles.main__content}>
             <SolicitacaoForm />
-            <SolicitacaoTable />
-            <SolicitacaoTotals />
           </div>
         </main>
       </div>
