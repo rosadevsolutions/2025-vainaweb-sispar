@@ -1,3 +1,4 @@
+import { useState } from "react";
 import IconMotivo from "../../assets/Solicitacao/icon-motivo.svg";
 import IconTrash from "../../assets/Solicitacao/icon-trash.svg";
 import styles from "./SolicitacaoTable.module.scss";
@@ -38,7 +39,7 @@ const rawData = [
     despesa: 0.00
   },
   {
-    colaborador: "Karynne Moreira",
+    colaborador: "Karyne Moreira",
     empresa: "Wilson Sons",
     numeroPrestacao: "546791",
     data: "2025-03-08",
@@ -57,6 +58,8 @@ const rawData = [
 ]
 
 export default function SolicitacaoTable() {
+  const [tableData, setTableData] = useState(rawData)
+
   return (
     <div className={styles.table__wrapper}>
       <table className={styles.table__content}>
@@ -80,169 +83,44 @@ export default function SolicitacaoTable() {
             <th>Despesa</th>
           </tr>
         </thead>
-        <tbody  className={styles.table__body}>
+        <tbody className={styles.table__body}>
+          {tableData.map(rowData => (
           <tr>
             <td>
               <button className={styles.table__button}>
-                <img className={`${styles.table__icon} ${styles.table__icon__trash}`} src={IconTrash} alt="Trash" title="Deletar linha" />
+                <img
+                  className={`${styles.table__icon} ${styles.table__icon__trash}`}
+                  src={IconTrash}
+                  alt="Trash"
+                  title="Deletar linha"
+                />
               </button>
             </td>
-            <td>
-              <p>Romulo Rosa</p>
-            </td>
-            <td>
-              <p>Rosadev Solutions</p>
-            </td>
-            <td>
-              <p>329456</p>
-            </td>
-            <td>
-              <p>10/03/2025</p>
-            </td>
+            <td>{rowData.colaborador}</td>
+            <td>{rowData.empresa}</td>
+            <td>{rowData.numeroPrestacao}</td>
+            <td>{rowData.data}</td>
             <td>
               <button className={styles.table__button}>
-                <img className={`${styles.table__icon} ${styles.table__icon__motivo}`} src={IconMotivo} alt="Motivo" title="Motivo" />
+                <img
+                  className={`${styles.table__icon} ${styles.table__icon__motivo}`}
+                  src={IconMotivo}
+                  alt="Motivo"
+                  title="Motivo" />
               </button>
             </td>
-            <td>
-              <p>Desp. de viagem administrativa</p>
-            </td>
-            <td>
-              <p>1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ</p>
-            </td>
-            <td>
-              <p>0003</p>
-            </td>
-            <td>
-              <p>002</p>
-            </td>
-            <td>
-              <p>001</p>
-            </td>
-            <td>
-              <p>BRL</p>
-            </td>
-            <td>
-              <p>434Km</p>
-            </td>
-            <td>
-              <p>0.65</p>
-            </td>
-            <td>
-              <p>242.10</p>
-            </td>
-            <td>
-              <p>40.05</p>
-            </td>
+            <td>{rowData.tipoDespesa}</td>
+            <td>{rowData.centroCusto}</td>
+            <td>{rowData.ordemInterna}</td>
+            <td>{rowData.divisao}</td>
+            <td>{rowData.pep}</td>
+            <td>{rowData.moeda} </td>
+            <td>{rowData.distanciaKm} </td>
+            <td>{rowData.ValorKm}</td>
+            <td>{rowData.valorFaturado}</td>
+            <td>{rowData.despesa}</td>
           </tr>
-          <tr>
-            <td>
-              <button className={styles.table__button}>
-                <img className={`${styles.table__icon} ${styles.table__icon__trash}`} src={IconTrash} alt="Trash" title="Deletar linha" />
-              </button>
-            </td>
-            <td>
-              <p>Samuel Silverio</p>
-            </td>
-            <td>
-              <p>Vai na Web</p>
-            </td>
-            <td>
-              <p>987789</p>
-            </td>
-            <td>
-              <p>09/03/2025</p>
-            </td>
-            <td>
-              <button className={styles.table__button}>
-                <img className={`${styles.table__icon} ${styles.table__icon__motivo}`} src={IconMotivo} alt="Motivo" title="Motivo" />
-              </button>
-            </td>
-            <td>
-              <p>Desp. de viagem administrativa</p>
-            </td>
-            <td>
-              <p>1100110102 - FIN CONTABILIDADE MTZ</p>
-            </td>
-            <td>
-              <p>0002</p>
-            </td>
-            <td>
-              <p>005</p>
-            </td>
-            <td>
-              <p>001</p>
-            </td>
-            <td>
-              <p>ARS</p>
-            </td>
-            <td>
-              <p>289Km</p>
-            </td>
-            <td>
-              <p>0.37</p>
-            </td>
-            <td>
-              <p>106.93</p>
-            </td>
-            <td>
-              <p>0.00</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button className={styles.table__button}>
-                <img className={`${styles.table__icon} ${styles.table__icon__trash}`} src={IconTrash} alt="Trash" title="Deletar linha" />
-              </button>
-            </td>
-            <td>
-              <p>Karynne Moreira</p>
-            </td>
-            <td>
-              <p>Wilson Sons</p>
-            </td>
-            <td>
-              <p>546791</p>
-            </td>
-            <td>
-              <p>08/03/2025</p>
-            </td>
-            <td>
-              <button className={styles.table__button}>
-                <img className={`${styles.table__icon} ${styles.table__icon__motivo}`} src={IconMotivo} alt="Motivo" title="Motivo" />
-              </button>
-            </td>
-            <td>
-              <p>Eventos de apresentação</p>
-            </td>
-            <td>
-              <p>1100109002 - FIN CONTROLES INTERNOS MTZ</p>
-            </td>
-            <td>
-              <p>0001</p>
-            </td>
-            <td>
-              <p>005</p>
-            </td>
-            <td>
-              <p>001</p>
-            </td>
-            <td>
-              <p>USD</p>
-            </td>
-            <td>
-              <p>197Km</p>
-            </td>
-            <td>
-              <p>0.75</p>
-            </td>
-            <td>
-              <p>109.75</p>
-            </td>
-            <td>
-              <p>29.97</p>
-            </td>
-          </tr>
+          ))}
         </tbody>
       </table>
     </div>

@@ -186,3 +186,34 @@
     justify-self: end;
   }
 }
+
+.totals{
+  &__wrapper{
+    align-items: flex-end;
+    display: flex;
+    gap: 1.6rem;
+    justify-content: flex-end;
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 8%;
+  }
+
+  &__label{
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__out{
+    border: 0.08rem solid var(--color-grey2);
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    height: 4.5rem;
+    padding: 1.2rem;
+    width: 100%
+  }
+}

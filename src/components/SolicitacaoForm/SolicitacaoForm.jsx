@@ -1,28 +1,39 @@
 import { useEffect, useState } from "react";
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
 import Api from "../../services/Api";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import SolicitacaoButton from "../SolicitacaoButton/SolicitacaoButton";
+import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
+>>>>>>> b4da711090b4b708c99e25e28b2e8d4e12d8c53d
+>>>>>>> 817acd3ed2ea5a1f51aeb4bd3fbbd6da567bcf50
 import styles from "./SolicitacaoForm.module.scss";
 
 
-export default function SolicitacaoForm (){
-  const [colaborador, setColaborador] = useState(""); // Estado para o campo colaborador
-  const [empresa, setEmpresa] = useState(""); // Estado para o campo empresa
-  const [numeroPrestacaoContas, setNumeroPrestacaoContas] = useState(""); // Estado para o campo número de prestação
-  const [descricao, setDescricao] = useState(""); // Estado para o campo  descrição
-  const [data, setData] = useState(""); // Estado para o campo dataAVANÇADO UTILIZANDO MODAL
-  const [tipoDespesa, setTipoDespesa] = useState(""); // Estado para o campo tipo de reembolso
-  const [centroCusto, setCentroCusto] = useState(""); // Estado para o campo centro de custo
-  const [ordemInterna, setOrdemInterna] = useState(""); // Estado para o campo ordem interna
-  const [divisao, setDivisao] = useState(""); // Estado para o campo divisão
-  const [pep, setPep] = useState(""); // Estado para o campo pep
-  const [moeda, setMoeda] = useState(""); // Estado para o campo moeda
-  const [distanciaKm, setDistanciaKm] = useState(""); // Estado para o campo distância km
-  const [valorKm, setValorKm] = useState(""); // Estado para o campo valor km
-  const [valorFaturado, setValorFaturado] = useState(""); // Estado para o campo valor faturado
-  const [despesa, setDespesa] = useState(""); // Estado para o campo despesa
+export default function SolicitacaoForm({onCreate}){
+  // Estados referente a cada campo do form
+  const [colaborador, setColaborador] = useState("");
+  const [empresa, setEmpresa] = useState("");
+  const [numeroPrestacaoContas, setNumeroPrestacaoContas] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [data, setData] = useState("");
+  const [tipoDespesa, setTipoDespesa] = useState("");
+  const [centroCusto, setCentroCusto] = useState("");
+  const [ordemInterna, setOrdemInterna] = useState("");
+  const [divisao, setDivisao] = useState("");
+  const [pep, setPep] = useState("");
+  const [moeda, setMoeda] = useState("");
+  const [distanciaKm, setDistanciaKm] = useState("");
+  const [valorKm, setValorKm] = useState("");
+  const [valorFaturado, setValorFaturado] = useState("");
+  const [despesa, setDespesa] = useState("");
 
-  const [dadosReembolso, setDadosReembolso] = useState([]); // Estado para o campo Dados de Reembolso
-  const [enviado, setEnviado] = useState(false); // State pra asber se o campo foi enviado
+  const [dadosReembolso, setDadosReembolso] = useState([]);
+
+  const [enviado, setEnviado] = useState(false);
+
 
   const handleSubmit = () => {
     const objetoReembolso = {
@@ -90,11 +101,32 @@ export default function SolicitacaoForm (){
     }
   },[enviado]); //Esse efeito só inicializa quando enviado mudar
 
+  const onSubmitCallback = (e) => {
+    e.preventDefault()
+    onCreate({
+      colaborador,
+      empresa,
+      numeroPrestacaoContas,
+      descricao,
+      data,
+      tipoDespesa,
+      ordemInterna,
+      centroCusto,
+      divisao,
+      pep,
+      moeda,
+      distanciaKm,
+      valorKm,
+      valorFaturado,
+      despesa
+    })
+  }
+
   return (
     <>
       <form
       className={styles.form__wrapper}
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={onSubmitCallback}
       >
         <div className={styles.form__container1}>
           <div className={styles.form__container1__top}>
@@ -192,7 +224,7 @@ export default function SolicitacaoForm (){
             <div className={`${styles.form__field} ${styles.form__field__tiposdespesas}`}>
               <label
                 className={styles.form__label}
-                htmlFor="tipodespesas"
+                htmlFor="tipodespesa"
               >
                 Tipos de Despesas
               </label>
@@ -200,7 +232,7 @@ export default function SolicitacaoForm (){
                 className={`${styles.form__select} ${styles.form__select__tiposdespesas}`}
                 value={tipoDespesa}
                 onChange={(e) => setTipoDespesa(e.target.value)}
-                id="tipodespesas"
+                id="tipodespesa"
               >
                 <option
                   className={`${styles.form__option} ${styles.form__option__tiposdespesas}`}
@@ -254,36 +286,42 @@ export default function SolicitacaoForm (){
             </div>
 
             <div className={`${styles.form__field} ${styles.form__field__centrocustos}`}>
-              <label className={styles.form__label}>Centro de Custos</label>
+              <label
+                className={styles.form__label}
+                htmlFor="centrocusto"
+              >
+                Centro de Custos
+              </label>
               <select
                 className={styles.form__select}
                 value={centroCusto}
                 onChange={(e) => setCentroCusto(e.target.value)}
+                id="centrocusto"
               >
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value=""
                   disabled selected hidden
                 >
-                Selecionar
+                  Selecionar
                 </option>
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value="controlesInternos"
                 >
-                1100109002 - FIN CONTROLES INTERNOS MTZ
+                  1100109002 - FIN CONTROLES INTERNOS MTZ
                 </option>
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value="vicePresidenciaFinancas"
                 >
-                1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ
+                  1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ
                 </option>
                 <option
                   className={`${styles.form__option} ${styles.form__option__centrocustos}`}
                   value="contabilidade"
                 >
-                1100110102 - FIN CONTABILIDADE MTZ
+                  1100110102 - FIN CONTABILIDADE MTZ
                 </option>
               </select>
             </div>
@@ -293,90 +331,138 @@ export default function SolicitacaoForm (){
           <div className={styles.form__container2__bottom}>
             <div className={styles.form__container2__bottom__left}>
               <div className={`${styles.form__field} ${styles.form__field__ordeminterna}`}>
-                <label className={styles.form__label}>Ord. Int.</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="ordeminterna"
+                >
+                  Ord. Int.
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__ordeminterna}`}
                   value={ordemInterna}
                   onChange={(e) => setOrdemInterna(e.target.value)}
                   type="text"
-                  name="ordemInterna"
+                  name="ordeminterna"
+                  id="ordeminterna"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__divisao}`}>
-                <label className={styles.form__label}>Div.</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="divisao"
+                >
+                  Div.
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__divisao}`}
                   value={divisao}
                   onChange={(e) => setDivisao(e.target.value)}
                   type="text"
                   name="divisao"
+                  id="divisao"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__pep}`}>
-                <label className={styles.form__label}>PEP</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="pep"
+                >
+                  PEP
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__pep}`}
                   value={pep}
                   onChange={(e) => setPep(e.target.value)}
                   type="text"
                   name="pep"
+                  id="pep"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__moeda}`}>
-                <label className={styles.form__label}>Moeda</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="moeda"
+                >
+                  Moeda
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__moeda}`}
                   value={moeda}
                   onChange={(e) => setMoeda(e.target.value)}
-                  type="text"
+                  type="number"
                   name="moeda"
+                  id="moeda"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__distanciakm}`}>
-                <label className={styles.form__label}>Dist / Km</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="distanciakm"
+                >
+                  Dist / Km
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__distanciakm}`}
                   value={distanciaKm}
                   onChange={(e) => setDistanciaKm(e.target.value)}
-                  type="text"
-                  name="distkm"
+                  type="number"
+                  name="distanciakm"
+                  id="distanciakm"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__valorkm}`}>
-                <label className={styles.form__label}>Valor / Km</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="valorkm"
+                >
+                  Valor / Km
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__valorkm}`}
                   value={valorKm}
                   onChange={(e) => setValorKm(e.target.value)}
-                  type="text"
+                  type="number"
                   name="valorkm"
+                  id="valorkm"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__valorfaturado}`}>
-                <label className={styles.form__label}>Val. Faturado</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="valorfaturado"
+                >
+                  Val. Faturado
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__valorfaturado}`}
                   value={valorFaturado}
                   onChange={(e) => setValorFaturado(e.target.value)}
-                  type="text"
+                  type="number"
                   name="valorfaturado"
+                  htmlFor="valortfaturado"
                 />
               </div>
 
               <div className={`${styles.form__field} ${styles.form__field__despesas}`}>
-                <label className={styles.form__label}>Despesas</label>
+                <label
+                  className={styles.form__label}
+                  htmlFor="despesas"
+                >
+                  Despesas
+                </label>
                 <input
                   className={`${styles.form__input} ${styles.form__input__despesas}`}
                   value={despesa}
                   onChange={(e) => setDespesa(e.target.value)}
-                  type="text"
+                  type="number"
                   name="despesas"
+                  id="despesas"
                 />
               </div>
             </div>
@@ -404,15 +490,34 @@ export default function SolicitacaoForm (){
                   title="Delete"
                 />
               </button>
-              <button
-                onClick={enviarParaAnalise}
-              >
-              Enviar para Análise
-              </button>
             </div>
           </div>
         </div>
       </form>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      <SolicitacaoTable />
+
+      <div className={styles.totals__wrapper}>
+      <div className={`${styles.totals__content} ${styles.totals__content__totalfaturado}`}>
+        <p className={styles.totals__label}>Total Faturado</p>
+        <div className={styles.totals__out}>458.78</div>
+      </div>
+      <div className={`${styles.totals__content} ${styles.totals__content__totaldespesa}`}>
+        <p className={styles.totals__label}>Total Despesa</p>
+        <div className={styles.totals__out}>70.02</div>
+      </div>
+      <SolicitacaoButton
+        cta="Enviar para Análise"
+        onClick={enviarParaAnalise}
+      />
+      <SolicitacaoButton cta="Cancelar Solicitação" />
+    </div>
+>>>>>>> b4da711090b4b708c99e25e28b2e8d4e12d8c53d
+>>>>>>> 817acd3ed2ea5a1f51aeb4bd3fbbd6da567bcf50
     </>
   );
 }
