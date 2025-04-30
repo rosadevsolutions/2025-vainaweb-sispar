@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
 import Api from "../../services/Api";
-import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
-import SolicitacaoTotals from "../SolicitacaoTotals/SolicitacaoTotals";
 import styles from "./SolicitacaoForm.module.scss";
 
 
@@ -415,8 +413,6 @@ export default function SolicitacaoForm (){
           </div>
         </div>
       </form>
-      <SolicitacaoTable />
-      <SolicitacaoTotals />
     </>
   );
 }
