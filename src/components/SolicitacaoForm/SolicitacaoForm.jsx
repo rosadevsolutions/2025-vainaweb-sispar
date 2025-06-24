@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
 import IconDelete from "../../assets/Solicitacao/icon-delete.svg";
 import Api from "../../services/Api";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import SolicitacaoButton from "../SolicitacaoButton/SolicitacaoButton";
 import SolicitacaoTable from "../SolicitacaoTable/SolicitacaoTable";
->>>>>>> b4da711090b4b708c99e25e28b2e8d4e12d8c53d
->>>>>>> 817acd3ed2ea5a1f51aeb4bd3fbbd6da567bcf50
 import styles from "./SolicitacaoForm.module.scss";
 
 
@@ -494,10 +488,6 @@ export default function SolicitacaoForm({onCreate}){
           </div>
         </div>
       </form>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       <SolicitacaoTable />
 
@@ -516,8 +506,6 @@ export default function SolicitacaoForm({onCreate}){
       />
       <SolicitacaoButton cta="Cancelar Solicitação" />
     </div>
->>>>>>> b4da711090b4b708c99e25e28b2e8d4e12d8c53d
->>>>>>> 817acd3ed2ea5a1f51aeb4bd3fbbd6da567bcf50
     </>
   );
 }
